@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{% block title %} {% endblock %} - Pemba T. Tech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="{{ url_for('static', filename='/image/48pxX48px_YouTube Channel Logo.png') }}"
+    type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Freehand&family=Rancho&family=Russo+One&family=VT323&display=swap" rel="stylesheet">
+  
+  <script src="https://kit.fontawesome.com/86faa2ace0.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}" />
+
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+</head>
+
+<body>
+  <div class="wrapper" id="wrapper">
+    <aside>
+      <a href="/">
+        <div class="logo_name-wrapper">
+          <div class="logo">
+            <img src="{{ url_for('static', filename='image/160pxX160px_YouTube Channel Logo.png') }}" alt="PTT logo">
+            <p> <span style="font-weight:600;">Pemba T. Tech</span></p>
+          </div>
+        </div>
+      </a>
+      <ul>
+        <li><a class="nav-link" href="/">Home</a></li>
+        <li><a class="nav-link" href="/about">About</a></li>
+        <li><a class="nav-link" href="/ytvideos">YT Videos</a></li>
+        <li><a class="nav-link" href="/cheatsheet">CheatSheet</a></li>
+        <li><a class="nav-link" href="tutorials">Tutorials</a></li>
+        <li><a class="nav-link" href="/community">Community</a></li>
+      </ul>
+      <!--Footer-->
+      <footer style="
+        opacity: 0.5;
+        color: #E8E8E8; 
+        text-align:center;
+        position: fixed;
+        bottom:0;
+        ">
+        <span id="copyright">
+          <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+        </span>
+        &copy;
+        Pemba T. Tech
+      </footer>
+    </aside>
+    <main>
+      <div class="wrapper_inner">
+        <div id="tags" class="htmltag">&lt;html&gt;</div>
+        <div id="tags" class="htmltag">&lt;body&gt;</div>
+
+        <div class="loader"><span>&nbsp;Pemba T. Tech is thinking</span></div>
+        {% block content %} {% endblock %}
+
+        <div id="tags" class="htmltag">&lt;/body&gt;</div>
+        <div id="tags" class="htmltag">&lt;/html&gt;</div>
+      </div>
+    </main>
+  </div>
+
+  <script type="text/javascript" src="{{ url_for('static', filename='js/loading.js') }}"/></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/scrolldown.js') }}"/></script>
+
+</body>
+
+</html>

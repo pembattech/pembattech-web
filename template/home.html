@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<div id="home" class="content_wrapper" href="/">    
+    <div id="tags" class="htmltag">&lt;h1&gt;</div> 
+    <div class="panel">
+        <h1 class="jj">Hi,<span>I'm PEMBA</span></h1>
+        <h1 class="jj">Hi,<span>I'm PEMBA</span></h1>
+    </div>
+    
+    <span id="tags" class="sameline__left_tag">&lt;/h1&gt;</span>
+    <span id="tags" class="sameline__left_tag">&lt;h4&gt;</span>
+    <div class="profession">
+        <h4>Backend Developer & <a href="https://www.youtube.com/c/pembattech" target="_blank"><span style="color: var(--text_color); text-decoration:underline; text-decoration-color: red;">YouTuber</span></a></h4>
+    </div>
+    
+    <span id="tags" class="sameline__right_tag">&lt;/h4&gt;</span>
+    
+    <div class="resume_button">
+        <a href="static/image/PEMBARESUME.pdf" target="_blank">
+            <button class="glow-on-hover" type="button">RESUME!</button>
+        </a>
+
+    </div>
+    <div class="hireme_button">
+        <a href="static/image/PEMBARESUME.pdf" target="_blank">
+            <button class="glow-on-hover" type="button">HIRE ME!</button>
+        </a>
+    </div>
+
+    <div class="wrap" id="scrolldown">
+        <div class="scroll-indicator">
+            <a class="scroll-down" href="#about__socialcontact">
+                <span>[ more ]</span>
+                <div class="scrolldown-btn">
+                </div>
+            </a>
+        </div>
+    </div>
+    
+
+</div>
+
+<div id="tags" class="htmltag">&lt;section&gt;</div>
+<div id="about__socialcontact" class="about__socialcontact" href="/about">
+    <div id="about">
+        <h2 class="heading">About Me</h2>
+        <div class="about-text">
+            <p>
+                My name is <span style="background:linear-gradient(90deg, #FFA500, #FF3659); font-weight:600; color:black;"> Pemba Tamang </span>. That would be me! The creator of the site and the owner of the YouTube channel <a href="https://www.youtube.com/c/pembattech" target="_blank"><span style="color:black; background:linear-gradient(90deg, #FFA500, #FF3659); font-weight:600;"> @Pemba T. Tech </span></a>. I am a computer science student that has a passion for programming and everything tech! Teaching and writing guides is my favorite past-time and allows for me to reinforce my learning while providing value to all of my supporters. As I learn and develop my programming skills I will be sharing all my knowledge on this site and on my channel completely for FREE!
+            </p>
+        </div>
+    </div>
+    
+    <div class="socialcontact_column">
+        <h2 class="heading">Stay Connect With Me</h2>
+        <div class="socialcontact_text-area">
+            
+            <a href="https://www.github.com/pembattech" target="_blank"><i class="fa fa-github"></i></a> 
+            <a href="https://www.linkedin.com/in/pemba-tamang-9663941a4/" target="_blank"><i class="fa fa-linkedin"></i></a> 
+            <a href="https://discord.com/invite/ZNkhDWN" target="_blank"><i class="fab fa-discord" aria-hidden="true"></i></a> 
+            <a href="https://www.twitter.com/pembattech" target="_blank"><i class="fa fa-twitter"></i></a> 
+            <a href="https://www.instagram.com/pemba_titung" target="_blank"><i class="fa fa-instagram"></i></a> 
+            <a href="https://www.youtube.com/c/pembattech" target="_blank"><i class="fa fa-youtube"></i></a> 
+            <a href="https://mail.google.com/mail/u/0/?to=pemba.t.tech5@gmail.com&fs=1&tf=cm" target="_blank"><i class="fa fa-google-plus"></i></a> 
+        </div>
+    </div>
+</div>
+<div id="tags" class="htmltag">&lt;/section&gt;</div>
+
+<div id="tags" class="htmltag">&lt;section&gt;</div>
+<h2 class="heading">Youtube Videos</h2>
+<div class="ytvid" id="ytvid">
+    <section class="card-list" id="ytvid_card-list">
+        {% for i in range(num_of_vidcards) %}
+            {% for PUBLISHED_AT, TITLE, THUMBNAIL, LINK in  vid_info%}
+                <article class="card" style = 
+                    "background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url({{THUMBNAIL}});">
+
+                    <header class="card-header">
+                        <a href="{{LINK}}" target="_blank"">
+
+                            <p>{{ PUBLISHED_AT }}</p>
+                            <h2>{{ TITLE }}</h2>
+                        </a>
+                    </header>
+                    
+                    <div class="card-author">
+                        <a class="author-avatar" href="https://www.youtube.com/c/pembattech" target="_blank">
+                            <img src="{{ url_for('static', filename='image/40pxX40px_YouTube Channel Logo.png') }}" />
+                        </a>
+                        <div class="author-name">
+                            Pemba T. Tech
+                        </div>
+                    </div>
+                </article>
+        
+            {% endfor %}
+        {% endfor %}
+    </section>
+</div>
+<div id="tags" class="htmltag">&lt;/section&gt;</div>
+
+<div id="tags" class="htmltag">&lt;section&gt;</div>
+<h2 class="heading">CheatSheet</h2>
+<div>
+
+    Coming Soon!
+</div>
+
+<div id="tags" class="htmltag">&lt;/section&gt;</div>
+
+
+<div id="tags" class="htmltag">&lt;form&gt;</div>
+<div id="contact">
+    <h2 class="heading">Get in Touch</h2>
+    <div id="contact-form">
+        <form method="POST" action="https://formspree.io/f/mwkyoedb" target="_blank">
+            <input type="hidden" name="_subject" value="Contact request from personal website" />
+            <input type="email" name="_replyto" placeholder="Your email" required>
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</div>
+<div id="tags" class="htmltag">&lt;/form&gt;</div>
+
+<div class="wrap" id="scrollup">
+    <div class="scrollup-indicator">
+        <a class="scroll-up" href="#home">
+            <span>[ go to top ]</span>
+            <div class="scrollup-btn">
+            </div>
+        </a>
+    </div>
+</div>
+<!--
+-->
+{% endblock %}

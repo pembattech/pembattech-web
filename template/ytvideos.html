@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %} YouTube Videos {% endblock %}
+{% block content %}
+
+<div id="tags" class="htmltag">&lt;section&gt;</div>
+<h2 class="heading">Youtube Videos</h2>
+<div class="ytvid" id="ytvid">
+    <section class="card-list" id="ytvid_card-list">
+        {% for i in range(num_of_vidcards) %}
+            {% for PUBLISHED_AT, TITLE, THUMBNAIL, LINK in  vid_info%}
+                <article class="card" style = 
+                    "background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url({{THUMBNAIL}});">
+
+                    <header class="card-header">
+                        <a href="{{LINK}}" target="_blank"">
+
+                            <p>{{ PUBLISHED_AT }}</p>
+                            <h2>{{ TITLE }}</h2>
+                        </a>
+                    </header>
+                    
+                    <div class="card-author">
+                        <a class="author-avatar" href="https://www.youtube.com/c/pembattech" target="_blank">
+                            <img src="{{ url_for('static', filename='image/40pxX40px_YouTube Channel Logo.png') }}" />
+                        </a>
+                        <div class="author-name">
+                            Pemba T. Tech
+                        </div>
+                    </div>
+                </article>
+        
+            {% endfor %}
+        {% endfor %}
+    </section>
+</div>
+<div id="tags" class="htmltag">&lt;/section&gt;</div>
+
+{% endblock %}

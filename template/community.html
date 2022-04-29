@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% block title %} Community {% endblock %}
+{% block content %}
+
+<div id="container">
+
+  <div id="discord_wrapper">
+    <h2 class="heading">Join Our Discord Server!</h2>
+    <iframe src="https://discord.com/widget?id=756384429961904188&theme=dark" width="350" height="250" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  </div>
+
+  <div id="youtube_wrapper"">
+    <h2 class="heading">Watch My Latest Video!</h2>
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/videoseries?list=UUkpnNI1yAFly-krXJLrNSmQ" frameborder="0" allowfullscreen></iframe>
+    <!--
+
+      <iframe class="latestVideoEmbed" vnum='0' cid="UCkpnNI1yAFly-krXJLrNSmQ" width="450" height="340" frameborder="5" allowfullscreen></iframe>
+      <iframe class="latestVideoEmbed" vnum='1' cid="UCkpnNI1yAFly-krXJLrNSmQ" width="450" height="340" frameborder="5" allowfullscreen></iframe>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script>
+      var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=UCkpnNI1yAFly-krXJLrNSmQ");
+      function loadVideo(iframe) {
+        $.getJSON(reqURL + iframe.getAttribute('cid'),
+          function(data) {
+            var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
+            console.log(videoNumber);
+            var link = data.items[videoNumber].link;
+            id = link.substr(link.indexOf("=") + 1);
+            iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=1");
+          }
+          );
+        }
+        var iframes = document.getElementsByClassName('latestVideoEmbed');
+      for (var i = 0, len = iframes.length; i < len; i++) {
+        loadVideo(iframes[i]);
+      }
+    </script>
+    -->
+  </div>
+
+  <div id="youtube_subscribe_wrapper"">
+    <h2 class="heading">Subscribe To My Channel!</h2>
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <div class="g-ytsubscribe" data-channelid="UCkpnNI1yAFly-krXJLrNSmQ" data-layout="full" data-theme="default" data-count="default"></div>
+  </div>
+
+
+  <div id="twitter_wrapper"">
+    <h2 class="heading">Follow Me On Twitter!</h2>
+    <div>
+      <a href="https://twitter.com/pembattech?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @pembattech</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    <div>
+      <a href="https://twitter.com/intent/tweet?screen_name=pembattech&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @pembattech</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    
+
+
+      </span>
+   </a>
+
+  </div>
+
+</div>
+
+
+{% endblock %}
+<!--
+  <style> 
+    .columns {
+      Width: 100%;
+}
+.column-1, .column-2 {
+  width:100%;
+}
+@media (min-width: 48em) {
+  .column-1 {
+    width: 70%;
+    float:left;
+  }
+  .column-2 {
+    width: 30%;
+    float:left;
+  }
+  
+  .columns {
+    content:"";
+    display: table;
+    clear: both;
+  }
+}
+</style>
+
+<div class="columns">
+    <div class="column column-1">
+      ///  Column 1: Put any relevant content here   ///
+    </div>
+    <div class="column column-2">
+      ///  Column 2: Put any relevant content here  ///
+   </div>
+  </div>
+-->
+
+
